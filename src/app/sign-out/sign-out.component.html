@@ -1,0 +1,22 @@
+<div class="sign-out-container">
+    <h2>Sign Out Visitor</h2>
+    <form [formGroup]="signOutForm" (ngSubmit)="onSubmit()">
+      <div>
+        <label for="fName">First Name:</label>
+        <input id="fName" formControlName="fName" type="text" />
+      </div>
+  
+      <div>
+        <label for="lName">Last Name:</label>
+        <input id="lName" formControlName="lName" type="text" />
+      </div>
+  
+      <div>
+        <label for="departureTime">Departure Time:</label>
+        <input id="departureTime" formControlName="departureTime" type="datetime-local" />
+      </div>
+  
+      <button type="submit" [disabled]="signOutForm.invalid">Submit</button>
+    </form>
+  </div>
+  
